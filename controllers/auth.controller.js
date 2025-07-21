@@ -72,7 +72,7 @@ try{
 
     res.status(200).json({
         success:true,
-        message:'USer signed in successfully',
+        message:'User signed in successfully',
         data:{
             token,
             user,

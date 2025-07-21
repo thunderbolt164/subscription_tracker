@@ -4,6 +4,8 @@ import User from '../models/user.model.js';
 
 // steps that how middle ware are working 
 // 1st-> someone is ,making a get request to get user details -> authorize middle ->verify ->if valid -> next -> get user details 
+
+// Some error in this authorization we will check latter the error is in get request it is showing unauthorized. 
 const authorize = async(req, res , next)=>{
     try{
         let token;
