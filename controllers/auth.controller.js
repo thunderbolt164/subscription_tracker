@@ -30,7 +30,7 @@ try{
 
     const newUsers = await User.create([{name,email,password:hashedPassword}],{session});
 
-    const token = jwt.sign({userId: newUsers[0]._id},JWT_SECRET,{expiresIn:JWT_EXPIRES_IN});
+    const token = jwt.sign({ userId: newUsers[0]._id }, JWT_SECRET, { expiresIn: JWT_EXPIRES_IN });
 
     await session.commitTransaction();
     session.endSession();
